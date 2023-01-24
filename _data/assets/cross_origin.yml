@@ -60,3 +60,6 @@ polyfill:
 
 mathjax:
   js: https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js
+
+d3:
+  js: https://d3js.org/d3.v4.js
