@@ -1,27 +1,11 @@
-<!-- Load d3.js -->
-<!-- Add a svg shape. Note that the 'target' class is attributed to the circle -->
-
-<!-- Add a svg area, empty -->
-
-
-<!-- Add a svg area, empty -->
-
-
 <div id="scatter_area"></div>
-
-<p>
-    <label># bins</label>
-    <input type="number" min="1" max="100" step="30" value="20" id="nBin">
-</p>
 
 <script src="https://d3js.org/d3.v4.js"></script>
 <script>
-// set the dimensions and margins of the graph
 var margin = {top: 10, right: 40, bottom: 30, left: 30},
     width = 450 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
-// append the svg object to the body of the page
 var svG = d3.select("#scatter_area")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -30,27 +14,23 @@ var svG = d3.select("#scatter_area")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-// Create data
 var data = [ {x:10, y:20}, {x:40, y:90}, {x:80, y:50} ]
 
-// X scale and Axis
 var x = d3.scaleLinear()
-    .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
-    .range([0, width]);       // This is the corresponding value I want in Pixel
+    .domain([0, 100])         
+    .range([0, width]);       
 svG
   .append('g')
   .attr("transform", "translate(0," + height + ")")
   .call(d3.axisBottom(x));
 
-// X scale and Axis
 var y = d3.scaleLinear()
-    .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
-    .range([height, 0]);       // This is the corresponding value I want in Pixel
+    .domain([0, 100])         
+    .range([height, 0]);      
 svG
   .append('g')
   .call(d3.axisLeft(y));
 
-// Add 3 dots for 0, 50 and 100%
 svG
   .selectAll("whatever")
   .data(data)
@@ -63,7 +43,7 @@ svG
 
 <style>
 
-.bar {
+#scatter_area {
     fill: steelblue;
 }
 
