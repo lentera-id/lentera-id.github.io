@@ -4,5 +4,5 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+> A Jekyll site combined with the social coding features of Github and the hosting capabilities of Github Pages, can serve as a powerful data visualization and collaboration.
+> {: .prompt-tip }
